@@ -1578,8 +1578,8 @@ google.script.run = new Proxy({}, {
                                     // User is bound, log them in
                                     onLoginSuccess(res);
                                 } else {
-                                    // User is not bound, redirect to registration page
-                                    window.location.href = "https://puppeypit.github.io/lineuserid/";
+                                    // User is not bound, redirect to registration page with uid
+                                    window.location.href = "https://doacoop-it.github.io/app-website/?uid=" + currentLineUserId;
                                 }
                             }).withFailureHandler(err => {
                                 document.getElementById('loading').classList.add('hidden');
