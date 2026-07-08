@@ -1569,6 +1569,7 @@ google.script.run = new Proxy({}, {
                     if (liff.isLoggedIn()) {
                         liff.getProfile().then(profile => {
                             currentLineUserId = profile.userId;
+                            window.lineProfilePic = profile.pictureUrl;
                             document.getElementById('loading').classList.remove('hidden');
                             
                             // Check if line user is bound
