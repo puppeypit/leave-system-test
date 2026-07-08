@@ -1591,7 +1591,8 @@ google.script.run = new Proxy({}, {
                             checkSession();
                         });
                     } else {
-                        if (liff.isInClient()) {
+                        const urlParams = new URLSearchParams(window.location.search);
+                        if (liff.isInClient() || urlParams.has('liff.referrer') || urlParams.has('liff.state')) {
                             liff.login();
                         } else {
                             checkSession();
